@@ -1,4 +1,4 @@
-package edu.umb.cs680.hw03;
+package edu.umb.cs680.hw04;
 enum StudentStatus {INSTATE, OUTSTATE, INTL}
 public class Student {
     private float tuition;

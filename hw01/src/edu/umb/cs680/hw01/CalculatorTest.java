@@ -1,4 +1,5 @@
 package edu.umb.cs680.hw01;
+
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
