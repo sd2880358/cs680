@@ -1,7 +1,7 @@
 package edu.umb.cs680.hw04;
 
 public class StudentFactory extends Student {
-    StudentFactory(float tuition, String name, int i20num, String usAddr, int yrsInState, String foreignAddr,
+    private StudentFactory(float tuition, String name, int i20num, String usAddr, int yrsInState, String foreignAddr,
                    StudentStatus status) {
         super(tuition, name, i20num, usAddr, yrsInState, foreignAddr, status);
     }
