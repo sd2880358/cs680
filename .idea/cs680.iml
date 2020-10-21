@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="ExternalSystem" linkedProjectPath="$USER_HOME$/Documents/cs680/hw01" rootProjectPath="$USER_HOME$/Documents/cs680/hw01" />
+  <component name="ExternalSystem" linkedProjectPath="$MODULE_DIR$/hw01" rootProjectPath="$MODULE_DIR$/hw01" />
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="org.junit.jupiter:junit-jupiter:5.4.2" level="project" />
   </component>
 </module>
