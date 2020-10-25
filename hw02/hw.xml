@@ -41,9 +41,7 @@
 	</target>
 
 	<target name="run" depends="compile">
-		<java classname="edu.umb.cs680.hw02.Calculator"
-			  classpathref="classpath"
-			  fork="true"/>
+
 		<junitlauncher printSummary="true">
 			<classpath refid="classpath"/>
 			<testclasses outputdir="test">

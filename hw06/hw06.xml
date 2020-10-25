@@ -15,9 +15,11 @@
     <property name="test.src" location="test/src" />
     <property name="test.bin" location="test/bin" />
 
+
     <path id="classpath">
         <pathelement location="bin" />
         <pathelement location="test/bin" />
+
         <fileset dir="${env.JUNIT}"/>
     </path>
     <echo message="${toString:classpath}" />
@@ -25,25 +27,55 @@
     <target name="init">
         <mkdir dir="${bin}"/>
         <mkdir dir="${test.bin}"/>
+
     </target>
 
     <target name="compile" depends="init">
         <javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
             <classpath refid="classpath"/>
-            <include name="edu/umb/cs680/hw04/Student.java"/>
+            <include name="edu/umb/cs680/hw06/PlayerState.java"/>
         </javac>
+
         <javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
             <classpath refid="classpath"/>
-            <include name="edu/umb/cs680/hw04/StudentFactory.java"/>
+            <include name="edu/umb/cs680/hw06/DVDPlayer.java"/>
         </javac>
+
+        <javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
+            <classpath refid="classpath"/>
+            <include name="edu/umb/cs680/hw06/DrawerOpen.java"/>
+        </javac>
+
+        <javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
+            <classpath refid="classpath"/>
+            <include name="edu/umb/cs680/hw06/DrawerClosedPlaying.java"/>
+        </javac>
+
+        <javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
+            <classpath refid="classpath"/>
+            <include name="edu/umb/cs680/hw06/DrawerClosedNotPlaying.java"/>
+        </javac>
+
         <javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="no">
             <classpath refid="classpath"/>
-            <include name="edu/umb/cs680/hw04/StudentFactoryTest.java"/>
+            <include name="edu/umb/cs680/hw06/DVDPlayerTest.java"/>
         </javac>
+
         <javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="no">
             <classpath refid="classpath"/>
-            <include name="edu/umb/cs680/hw04/StudentTest.java"/>
+            <include name="edu/umb/cs680/hw06/DrawerOpenTest.java"/>
         </javac>
+
+        <javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="no">
+            <classpath refid="classpath"/>
+            <include name="edu/umb/cs680/hw06/DrawerClosedPlayingTest.java"/>
+        </javac>
+
+        <javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="no">
+            <classpath refid="classpath"/>
+            <include name="edu/umb/cs680/hw06/DrawerClosedNotPlayingTest.java"/>
+        </javac>
+
     </target>
 
     <target name="run" depends="compile">
@@ -51,7 +83,7 @@
             <classpath refid="classpath"/>
             <testclasses outputdir="test">
                 <fileset dir="${test.bin}">
-                    <include name="edu/umb/cs680/hw04/*Test.class"/>
+                    <include name="edu/umb/cs680/hw06/*Test.class"/>
                 </fileset>
                 <listener type="legacy-plain" sendSysOut="true"/>
             </testclasses>
@@ -61,7 +93,8 @@
     <target name="clean" depends="run">
         <delete includeemptydirs="true">
             <fileset dir="${bin}"/>
-            <fileset dir="${test.bin}" includes="**/*"/>
+            <fileset dir="${test.bin}"/>
+            <!-- fileset dir="${test.bin}/edu/umb/cs680/junit5intro" includes="**/*" /-->
         </delete>
     </target>
 

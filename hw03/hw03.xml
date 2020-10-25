@@ -36,19 +36,16 @@
         </javac>
         <javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="no">
             <classpath refid="classpath"/>
-            <include name="edu/umb/cs680/hw03/PrimeGenerator.java"/>
+            <include name="edu/umb/cs680/hw03/PrimeGeneratorTest.java"/>
         </javac>
     </target>
 
     <target name="run" depends="compile">
-        <java classname="edu.umb.cs680.hw03.PrimeGenerator"
-              classpathref="classpath"
-              fork="true"/>
         <junitlauncher printSummary="true">
             <classpath refid="classpath"/>
             <testclasses outputdir="test">
                 <fileset dir="${test.bin}">
-                    <include name="edu/umb/cs680/hw03/test/bin/PrimeGeneratorTest.class"/>
+                    <include name="edu/umb/cs680/hw03/*Test.class"/>
                 </fileset>
                 <listener type="legacy-plain" sendSysOut="true"/>
             </testclasses>

@@ -14,7 +14,6 @@
     <property name="bin" location="bin" />
     <property name="test.src" location="test/src" />
     <property name="test.bin" location="test/bin" />
-    <property name="test.reports" location="test/report" />
 
     <path id="classpath">
         <pathelement location="bin" />
@@ -41,14 +40,11 @@
     </target>
 
     <target name="run" depends="compile">
-        <java classname="edu.umb.cs680.hw04.StudentFactory"
-              classpathref="classpath"
-              fork="true"/>
         <junitlauncher printSummary="true">
             <classpath refid="classpath"/>
             <testclasses outputdir="test">
                 <fileset dir="${test.bin}">
-                    <include name="edu/umb/cs680/hw05/test/bin/CarTest.class"/>
+                    <include name="edu/umb/cs680/hw05/*Test.class"/>
                 </fileset>
                 <listener type="legacy-plain" sendSysOut="true"/>
             </testclasses>
