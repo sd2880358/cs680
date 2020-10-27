@@ -1,0 +1,8 @@
+Testcase: edu.umb.cs680.hw04.StudentFactoryTest
+Test: createOutStateStudent() took 10 milli sec(s)
+Test: getName() took 1 milli sec(s)
+Test: getTuition() took 0 milli sec(s)
+Test: createIntlStudent() took 0 milli sec(s)
+Test: getStatus() took 0 milli sec(s)
+Test: createInStateStudent() took 0 milli sec(s)
+Tests run: 6, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 19 milli sec(s)
